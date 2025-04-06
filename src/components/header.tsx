@@ -4,8 +4,8 @@ const links = [
     label: "Home",
   },
   {
-    href: "/profile",
-    label: "Profile",
+    href: "/profil",
+    label: "Profil",
   },
   {
     href: "/prestasi",
