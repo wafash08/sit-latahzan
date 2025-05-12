@@ -1,17 +1,182 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import { HeroCarousel } from "@/components/hero-carousel.tsx";
+import CtaButtton from "@/components/cta-buttton.astro";
+import SchoolUnitCard from "@/components/school-unit-card.astro";
+import ProgramCard from "@/components/program-card.astro";
+import { schoolUnits } from "@/data/school-units";
+import { programs } from "@/data/programs";
+// import { HeroCarousel } from "@/components/hero-carousel.tsx";
 ---
 
 <Layout>
-  <section>
+  <section class="mb-32">
     <div
-      class="container px-4 m-auto flex h-[500px] border border-red-500 items-center justify-between"
+      class="container px-4 pt-48 mx-auto flex flex-col justify-center items-center"
     >
-      <h1>Hero section</h1>
-      <div>
-        <HeroCarousel client:load />
+      <h1
+        class="font-plus-jakarta-sans text-6xl font-bold w-full max-w-[890px] text-center leading-[74px] mb-6"
+      >
+        Selamat datang di Sekolah Islam Terpadu (SIT) La-Tahzan
+      </h1>
+      <p
+        class="text-xl text-[#474747] w-full max-w-[780px] text-center tracking-[0.5px] mb-8"
+      >
+        Tempat terbaik untuk membentuk generasi unggul yang cerdas, berakhlak
+        mulia, dan berlandaskan nilai-nilai Islam.
+      </p>
+
+      <div class="mb-20">
+        <CtaButtton />
+      </div>
+
+      <div class="relative w-full flex justify-center">
+        <div
+          class:list={[
+            "w-full aspect-video rounded-4xl overflow-hidden shadow",
+            "scale-100 transition-transform hover:scale-105",
+          ]}
+        >
+          <img
+            src="/src/assets/kegiatan-belajar-mengajar.png"
+            alt="Kegiatan belajar mengajar"
+            class="w-full h-full"
+          />
+        </div>
+        <div
+          class="absolute w-full max-w-[1180px] h-[1180px] top-1/2 -translate-y-1/2 -z-10"
+        >
+          <img
+            src="/src/assets/hero-ellipse.svg"
+            alt="Hero Ellips"
+            class="pointer-events-none w-full h-full"
+          />
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="mb-32">
+    <div class="container px-4 mx-auto">
+      <p class="text-base tracking-[2px] text-center text-[#474747] mb-2">
+        UNIT PENDIDIKAN
+      </p>
+      <h2
+        class="font-plus-jakarta-sans text-5xl text-center w-full max-w-[570px] mx-auto leading-[54px] mb-6"
+      >
+        Pendidikan Islami dari Usia Dini hingga Remaja
+      </h2>
+      <p
+        class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
+      >
+        Dengan pendekatan holistik berbasis nilai-nilai Islam, setiap unit
+        pendidikan di SIT La-Tahzan dirancang untuk mendukung potensi anak sejak
+        dini hingga usia remaja.
+      </p>
+
+      <div>
+        <ul class="grid grid-cols-2 gap-5">
+          {
+            schoolUnits.map((unit) => (
+              <li>
+                <SchoolUnitCard
+                  alt={unit.alt}
+                  src={unit.src}
+                  title={unit.title}
+                />
+              </li>
+            ))
+          }
+        </ul>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container px-4 mx-auto">
+      <p class="text-base tracking-[2px] text-center text-[#474747] mb-2">
+        INOVASI PEMBELAJARAN
+      </p>
+      <h2
+        class="font-plus-jakarta-sans text-5xl text-center w-full max-w-[570px] mx-auto leading-[54px] mb-6"
+      >
+        Program Unggulan
+      </h2>
+      <p
+        class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
+      >
+        Kami menghadirkan beragam program unggulan yang menjadi ciri khas SIT
+        La-Tahzan—mengintegrasikan nilai-nilai Islam dengan pembelajaran
+        akademik dan pengembangan diri.
+      </p>
+
+      <div class="relative">
+        <!-- dekorasi -->
+        <svg
+          width="1380"
+          height="1380"
+          viewBox="0 0 1380 1380"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <g filter="url(#filter0_f_77_247)">
+            <circle cx="690" cy="690" r="590" fill="url(#paint0_radial_77_247)"
+            ></circle>
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_77_247"
+              x="0"
+              y="0"
+              width="1380"
+              height="1380"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"></feBlend>
+              <feGaussianBlur
+                stdDeviation="50"
+                result="effect1_foregroundBlur_77_247"></feGaussianBlur>
+            </filter>
+            <radialGradient
+              id="paint0_radial_77_247"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(690 690) rotate(90) scale(590)"
+            >
+              <stop stop-color="#A9C46C"></stop>
+              <stop offset="1" stop-color="white"></stop>
+            </radialGradient>
+          </defs>
+        </svg>
+        <ul class="grid grid-cols-2 gap-5">
+          {
+            programs.map((program) => {
+              return (
+                <li
+                  class:list={[program.featured ? "col-span-2" : "col-span-1"]}
+                >
+                  <ProgramCard
+                    color={program.color}
+                    description={program.description}
+                    name={program.name}
+                  />
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="w-full h-[1000px]"></div>
 </Layout>

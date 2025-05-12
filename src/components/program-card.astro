@@ -1,0 +1,22 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  color?: string;
+}
+
+const { color, description, name } = Astro.props;
+---
+
+<div
+  class="group w-full h-full bg-white rounded-2xl overflow-hidden border border-[#dddddd] flex flex-col justify-center items-center py-16 px-8"
+>
+  <div aria-hidden="true" class="bg-[#bab8b8] w-16 h-16 rounded-full mb-6">
+  </div>
+  <p class="font-plus-jakarta-sans text-[32px] font-bold leading-[40px] mb-4">
+    {name}
+  </p>
+  <p class="text-center w-full max-w-xl text-[#474747] leading-[28px]">
+    {description}
+  </p>
+</div>

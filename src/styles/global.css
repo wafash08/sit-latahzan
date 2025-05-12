@@ -1,7 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
-
 @plugin "tailwindcss-animate";
-
 @custom-variant dark (&:is(.dark *));
 @import "tailwindcss/utilities";
 /* @import "tailwindcss/components"; */
@@ -122,6 +121,11 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
   }
+}
+
+@theme {
+  --font-plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
 }
