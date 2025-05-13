@@ -20,8 +20,8 @@ const links: TLink[] = [
     label: "Beranda",
   },
   {
-    href: "/tentang",
-    label: "Tentang",
+    href: "/profil",
+    label: "Profil",
   },
   {
     href: "/prestasi",
