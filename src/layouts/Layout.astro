@@ -2,6 +2,14 @@
 import { Header } from "@/components/header";
 import Footer from "@/components/footer.astro";
 import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  inHomePage?: boolean;
+}
+
+const { title, description, inHomePage = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,7 +19,8 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>SIT La-Tahzan</title>
+    <meta name="description" content={description} />
+    <title>{title}</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
@@ -19,7 +28,7 @@ import "../styles/global.css";
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer inHomePage={inHomePage} />
   </body>
 </html>
 

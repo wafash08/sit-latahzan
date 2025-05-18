@@ -5,10 +5,14 @@ import SchoolUnitCard from "@/components/school-unit-card.astro";
 import ProgramCard from "@/components/program-card.astro";
 import { schoolUnits } from "@/data/school-units";
 import { programs } from "@/data/programs";
-// import { HeroCarousel } from "@/components/hero-carousel.tsx";
+import { homeMetaData } from "@/data/meta-data";
 ---
 
-<Layout>
+<Layout
+  title={homeMetaData.title}
+  description={homeMetaData.description}
+  inHomePage
+>
   <section class="mb-32">
     <div
       class="container px-4 pt-48 mx-auto flex flex-col justify-center items-center"
@@ -16,7 +20,7 @@ import { programs } from "@/data/programs";
       <h1
         class="font-plus-jakarta-sans text-6xl font-bold w-full max-w-[890px] text-center leading-[74px] mb-6"
       >
-        Selamat datang di Sekolah Islam Terpadu (SIT) La-Tahzan
+        Selamat datang di Sekolah Islam Terpadu (SIT) LaTahzan
       </h1>
       <p
         class="text-xl text-[#474747] w-full max-w-[780px] text-center tracking-[0.5px] mb-8"
@@ -26,14 +30,14 @@ import { programs } from "@/data/programs";
       </p>
 
       <div class="mb-20">
-        <CtaButtton />
+        <CtaButtton href="/ppdb" />
       </div>
 
       <div class="relative w-full flex justify-center">
         <div
           class:list={[
             "w-full aspect-video rounded-4xl overflow-hidden shadow",
-            "scale-100 transition-transform hover:scale-105",
+            "scale-100 transition-transform",
           ]}
         >
           <img
@@ -69,7 +73,7 @@ import { programs } from "@/data/programs";
         class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
       >
         Dengan pendekatan holistik berbasis nilai-nilai Islam, setiap unit
-        pendidikan di SIT La-Tahzan dirancang untuk mendukung potensi anak sejak
+        pendidikan di SIT LaTahzan dirancang untuk mendukung potensi anak sejak
         dini hingga usia remaja.
       </p>
 
@@ -92,7 +96,7 @@ import { programs } from "@/data/programs";
     </div>
   </section>
 
-  <section>
+  <section class="mb-[458px]">
     <div class="container px-4 mx-auto">
       <p class="text-base tracking-[2px] text-center text-[#474747] mb-2">
         INOVASI PEMBELAJARAN
@@ -106,8 +110,8 @@ import { programs } from "@/data/programs";
         class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
       >
         Kami menghadirkan beragam program unggulan yang menjadi ciri khas SIT
-        La-Tahzan—mengintegrasikan nilai-nilai Islam dengan pembelajaran
-        akademik dan pengembangan diri.
+        LaTahzan—mengintegrasikan nilai-nilai Islam dengan pembelajaran akademik
+        dan pengembangan diri.
       </p>
 
       <div class="relative">
@@ -177,6 +181,4 @@ import { programs } from "@/data/programs";
       </div>
     </div>
   </section>
-
-  <div class="w-full h-[1000px]"></div>
 </Layout>

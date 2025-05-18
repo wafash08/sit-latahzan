@@ -1,8 +1,21 @@
 ---
+import CtaContent from "./cta-content.astro";
 
+interface Props {
+  inHomePage?: boolean;
+}
+
+const { inHomePage } = Astro.props;
 ---
 
-<footer class="bg-[#F4FFC3]/50 w-full pt-40 pb-16">
+<footer class="bg-[#F4FFC3]/50 w-full pt-40 pb-16 relative">
+  {
+    inHomePage && (
+      <div class="absolute -top-80 left-1/2 -translate-x-1/2 w-full max-w-5xl">
+        <CtaContent />
+      </div>
+    )
+  }
   <div class="container mx-auto px-4">
     <ul class="flex items-center gap-5 mb-8">
       <li class="w-20 h-20 rounded-full bg-red-400"></li>
@@ -12,7 +25,7 @@
     <div class="grid grid-cols-3 gap-5 mb-20">
       <div class="w-full max-w-xs">
         <h3 class="font-plus-jakarta-sans text-2xl tracking-[1px] mb-4">
-          SIT La-Tahzan
+          SIT LaTahzan
         </h3>
         <p class="text-[#999999]">
           Tempat terbaik untuk membentuk generasi unggul yang cerdas, berakhlak

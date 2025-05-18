@@ -1,58 +1,76 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { achievementMetaData } from "@/data/meta-data";
 ---
-<Layout>
-    <section class="bg-white-700 mx-auto">
-        <div class="flex justify-between items-center container mx-auto p-7">
-            <img class="w-24" src="/jsit.png" alt="" />
-            <!-- <h1 class="text-center font-bold text-4xl text-white ">ABOUT <span class="text-yellow-500">US</span></h1> -->
-            <img class="w-24" src="sditlatahzan.png" alt="" />
-        </div>
-    </section>
-    <div class="max-w-l mb-16 text-center mx-auto bg-white w-[700px]">
-        <h1 class="font-bold text-4xl mb-[40px] mt-6">Buah dari Usaha, Doa dan Pembinaan</h1>
-        <p class="text-slate-800 capitalize">Prestasi siswa- siswi kami adalah hasil dari proses panjang yang mengedepankan nilai-nilai Islam, kerja keras, dan semangat untuk terus berkembang.</p>
+
+<Layout
+  description={achievementMetaData.description}
+  title={achievementMetaData.title}
+>
+  <section class="bg-white-700 mx-auto">
+    <div class="flex justify-between items-center container mx-auto p-7">
+      <img class="w-24" src="/jsit.png" alt="" />
+      <!-- <h1 class="text-center font-bold text-4xl text-white ">ABOUT <span class="text-yellow-500">US</span></h1> -->
+      <img class="w-24" src="sditlatahzan.png" alt="" />
     </div>
-    <!-- content -->
-     <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
-        <img class="w-[310px] h-[278px]" src="/src/assets/Fathan juara 2 nyanyi.jpg" alt="Fathan"/>
-        <div class="p-50">
-            <h1 class="text-center text-slate-500 ">JUARA 2</h1>
-            <h1 class="text-center font-bold mb-10">Juara Lomba Menyanyi</h1>
-            <h1 class="text-center text-slate-500 ">2025</h1>
-            <h1 class="text-center text-slate-500">Diraih Oleh</h1>
-            <h1 class="text-center font-bold">FATHAN AL-MAISAH SADWALUDIN</h1>
-        </div>
-     </div>
-     <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
-        <img class="w-[310px] h-[278px]" src="/src/assets/kevan.jpeg" alt="Kevan"/>
-        <div class="p-50">
-            <h1 class="text-center text-slate-500">JUARA 1</h1>
-            <h1 class="text-center font-bold mb-10 ">Juara Lomba Silat</h1>
-            <h1 class="text-center text-slate-500 ">2025</h1>
-            <h1 class="text-center text-slate-500 ">Diraih Oleh</h1>
-            <h1 class="text-center font-bold ">KEVAN ATHARIZZ CALIEF</h1>
-        </div>
-     </div>
-     <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
-        <img class="w-[310px] h-[278px]" src="/src/assets/qales.jpg" alt="Qalleshya"/>
-        <div class="p-50">
-            <h1 class="text-center text-slate-500">JUARA 1</h1>
-            <h1 class="text-center font-bold mb-10 ">Juara Lomba Silat</h1>
-            <h1 class="text-center text-slate-500 ">2025</h1>
-            <h1 class="text-center text-slate-500 ">Diraih Oleh</h1>
-            <h1 class="text-center font-bold ">QALLESHYA ZAEMMA ADZIMA TINNUR</h1>
-        </div>
-     </div>
-     <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
-        <img class="w-[310px] h-[278px]" src="/src/assets/rizqi.jpeg" alt="Rizqi"/>
-        <div class="p-50">
-            <h1 class="text-center text-slate-500 ">JUARA 1</h1>
-            <h1 class="text-center font-bold mb-10">Juara Lomba Tifan</h1>
-            <h1 class="text-center text-slate-500 ">2025</h1>
-            <h1 class="text-center text-slate-500 ">Diraih Oleh</h1>
-            <h1 class="text-center font-bold ">AHMAD NUR RIZQI</h1>
-        </div>
-     </div>
-    
+  </section>
+  <div class="max-w-l mb-16 text-center mx-auto bg-white w-[700px]">
+    <h1 class="font-bold text-4xl mb-[40px] mt-6">
+      Buah dari Usaha, Doa dan Pembinaan
+    </h1>
+    <p class="text-slate-800 capitalize">
+      Prestasi siswa- siswi kami adalah hasil dari proses panjang yang
+      mengedepankan nilai-nilai Islam, kerja keras, dan semangat untuk terus
+      berkembang.
+    </p>
+  </div>
+  <!-- content -->
+  <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
+    <img
+      class="w-[310px] h-[278px]"
+      src="/src/assets/Fathan juara 2 nyanyi.jpg"
+      alt="Fathan"
+    />
+    <div class="p-50">
+      <h1 class="text-center text-slate-500">JUARA 2</h1>
+      <h1 class="text-center font-bold mb-10">Juara Lomba Menyanyi</h1>
+      <h1 class="text-center text-slate-500">2025</h1>
+      <h1 class="text-center text-slate-500">Diraih Oleh</h1>
+      <h1 class="text-center font-bold">FATHAN AL-MAISAH SADWALUDIN</h1>
+    </div>
+  </div>
+  <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
+    <img class="w-[310px] h-[278px]" src="/src/assets/kevan.jpeg" alt="Kevan" />
+    <div class="p-50">
+      <h1 class="text-center text-slate-500">JUARA 1</h1>
+      <h1 class="text-center font-bold mb-10">Juara Lomba Silat</h1>
+      <h1 class="text-center text-slate-500">2025</h1>
+      <h1 class="text-center text-slate-500">Diraih Oleh</h1>
+      <h1 class="text-center font-bold">KEVAN ATHARIZZ CALIEF</h1>
+    </div>
+  </div>
+  <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
+    <img
+      class="w-[310px] h-[278px]"
+      src="/src/assets/qales.jpg"
+      alt="Qalleshya"
+    />
+    <div class="p-50">
+      <h1 class="text-center text-slate-500">JUARA 1</h1>
+      <h1 class="text-center font-bold mb-10">Juara Lomba Silat</h1>
+      <h1 class="text-center text-slate-500">2025</h1>
+      <h1 class="text-center text-slate-500">Diraih Oleh</h1>
+      <h1 class="text-center font-bold">QALLESHYA ZAEMMA ADZIMA TINNUR</h1>
+    </div>
+  </div>
+  <div class="mx-auto container w-[980px] h-[278px] border-2 flex items-center">
+    <img class="w-[310px] h-[278px]" src="/src/assets/rizqi.jpeg" alt="Rizqi" />
+    <div class="p-50">
+      <h1 class="text-center text-slate-500">JUARA 1</h1>
+      <h1 class="text-center font-bold mb-10">Juara Lomba Tifan</h1>
+      <h1 class="text-center text-slate-500">2025</h1>
+      <h1 class="text-center text-slate-500">Diraih Oleh</h1>
+      <h1 class="text-center font-bold">AHMAD NUR RIZQI</h1>
+    </div>
+  </div>
 </Layout>

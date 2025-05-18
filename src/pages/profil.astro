@@ -1,12 +1,13 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import { profileMetaData } from "@/data/meta-data";
 ---
 
-<Layout>
+<Layout description={profileMetaData.description} title={profileMetaData.title}>
   <section class="bg-white mx-auto">
     <div class="flex justify-between items-center container mx-auto p-7">
       <img class="w-24" src="/jsit.png" alt="" />
-      <h1 class="text-center font-bold text-4xl">Sejarah La-Tahzan</h1>
+      <h1 class="text-center font-bold text-4xl">Sejarah LaTahzan</h1>
       <img class="w-24" src="sditlatahzan.png" alt="" />
     </div>
     <div class="mx-auto w-[1100px] container p-10 pb-[100px]">
@@ -37,109 +38,151 @@ import Layout from "@/layouts/Layout.astro";
         memadukan keilmuannya untuk kepentingan umat.
       </p>
     </div>
-    
   </section>
   <section class="bg-white mx-auto container">
-    <section class="mx-auto  container">
+    <section class="mx-auto container">
       <div class="w-full rounded-e-xl border-solid mb-[120px]">
-        <h2 class="text-center font-bold mt-[100px] text-[48px]">
-          VISI
-        </h2>
+        <h2 class="text-center font-bold mt-[100px] text-[48px]">VISI</h2>
         <p class="text-center text-xl mt-[80px]">
           Membentuk generasi Rabbani yang menguasai serta memanfaatkan ilmu
           pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
         </p>
       </div>
       <div class="w-full mt-[100px]">
-        <h2 class="text-center font-bold mt-[100px] pl-4 text-[48px]">
-          MISI 
-        </h2>
-        <p class="text-center mt-10 p-4 pb-10 text-xl">Sebagai wujud nyata dari visi sekolah, kami merumuskan tujuh misi utama yang menjadi dasar dalam setiap langkah pendidikan di SIT La-Tahzan.</p>
+        <h2 class="text-center font-bold mt-[100px] pl-4 text-[48px]">MISI</h2>
+        <p class="text-center mt-10 p-4 pb-10 text-xl">
+          Sebagai wujud nyata dari visi sekolah, kami merumuskan tujuh misi
+          utama yang menjadi dasar dalam setiap langkah pendidikan di SIT
+          LaTahzan.
+        </p>
         <div class="grid grid-cols-12 gap-5 pt-[110px]">
           <div class="col-span-4">
             <div class="">
-                <p class="mt-3 text-center text-2sm pl-4">Menyelanggarakan <strong>pendidikan</strong> berdasarkan <strong>keislaman</strong>.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Menyelanggarakan <strong>pendidikan</strong> berdasarkan <strong
+                  >keislaman</strong
+                >.
+              </p>
             </div>
           </div>
           <div class="col-span-4">
             <div>
-                <p class="mt-3 text-center text-2sm pl-4">Menanamkan keislaman berdasarkan <strong>al-Quran</strong> dan <strong>Sunnah</strong>.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Menanamkan keislaman berdasarkan <strong>al-Quran</strong> dan <strong
+                  >Sunnah</strong
+                >.
+              </p>
             </div>
           </div>
           <div class="col-span-4">
             <div>
-                <p class="mt-3 text-center text-2sm pl-4">Melaksanakan program pendidikan, yang mendorong pola pikir <strong>maju</strong> dan
-                  <strong>kreatif</strong>.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Melaksanakan program pendidikan, yang mendorong pola pikir <strong
+                  >maju</strong
+                > dan
+                <strong>kreatif</strong>.
+              </p>
             </div>
           </div>
           <div class="col-span-4">
             <div>
-                <p class="mt-3 text-center text-2sm pl-4">Memfasilitasi siswa dalam mengembangkan <strong>kemampuan</strong> dan <strong>pengetahuan</strong>.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Memfasilitasi siswa dalam mengembangkan <strong
+                  >kemampuan</strong
+                > dan <strong>pengetahuan</strong>.
+              </p>
             </div>
           </div>
           <div class="col-span-4">
             <div>
-                <p class="mt-3 text-center text-2sm pl-4">Meningkatkan prestasi, <strong>keterampilan</strong> dan <strong>kemandirian</strong> siswa.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Meningkatkan prestasi, <strong>keterampilan</strong> dan <strong
+                  >kemandirian</strong
+                > siswa.
+              </p>
             </div>
           </div>
           <div class="col-span-4">
             <div>
-                <p class="mt-3 text-center text-2sm pl-4">Mencintai dan menjadikan <strong>budaya Nasional</strong> sebagai <strong>Identitas diri</strong>.</p>
+              <p class="mt-3 text-center text-2sm pl-4">
+                Mencintai dan menjadikan <strong>budaya Nasional</strong> sebagai
+                <strong>Identitas diri</strong>.
+              </p>
             </div>
           </div>
           <div class="col-span-12 flex justify-center">
             <div>
-                <p class="mt-3 text-2sm pl-4"><p>Mewujudkan <strong>lingkungan</strong> sekolah <strong>bersih</strong>, <strong>sehat</strong> dan <strong>nyaman</strong>.</p>
+              <p class="mt-3 text-2sm pl-4">
+                <p>
+                  Mewujudkan <strong>lingkungan</strong> sekolah <strong
+                    >bersih</strong
+                  >, <strong>sehat</strong> dan <strong>nyaman</strong>.
+                </p>
+              </p>
             </div>
           </div>
-        </div>
 
-      <div class="mx-auto pb-10">
-        <h1 class="text-center font-bold pl-4 text-[48px] mt-[120px]">TUJUAN</h1>
-        <p class="text-center mt-10 pl-4 text-xl">Membentuk generasi Rabbani
-          serta menguasai & memanfaatkan ilmu pengetahuan dan teknologi dengan
-          pola pikir maju dan kreatif.</p>
-      </div>
-      <div class="flex justify-between items-center mx-auto p-[100px]">
-        <img class="w-20" src="/src/assets/open.png" alt="icon-open" >
-        <h1 class="text-center mt-10 pl-4 text-3xl font-bold p-7">Membentuk generasi Rabbani
-          serta menguasai & memanfaatkan ilmu pengetahuan dan teknologi dengan
-          pola pikir maju dan kreatif.</h1>
-        <img class="w-20" src="/src/assets/close.png" alt="icon-close">
-      </div>
-      <div class="mx-auto container pb-[100px]">
-          <img>
-          <h1 class="text-center text-xl font-bold">K.H Syarifullah S.pd M.A</h1>
-          <h1 class="text-center text-2xl font-bold">Ketua Yayasan As-Salam</h1>
-      </div>
-      <div class="mx-auto container w-[1000px]" >
-          <div class="flex mx auto w-[1180px] ">
-            <img class="w-15 p-2" src="/jsit.png" alt=""/>
-            <img class="w-15 p-2" src="sditlatahzan.png" alt="" />
+          <div class="mx-auto pb-10">
+            <h1 class="text-center font-bold pl-4 text-[48px] mt-[120px]">
+              TUJUAN
+            </h1>
+            <p class="text-center mt-10 pl-4 text-xl">
+              Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
+              pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
+            </p>
           </div>
-          <div class="flex justify-between items-center container mx-auto  w-[1000px]">
-            <h1>SIT La-Tahzan</h1>
-            <h2>Navigasi</h2>
-            <h2>kontak</h2>
+          <div class="flex justify-between items-center mx-auto p-[100px]">
+            <img class="w-20" src="/src/assets/open.png" alt="icon-open" />
+            <h1 class="text-center mt-10 pl-4 text-3xl font-bold p-7">
+              Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
+              pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
+            </h1>
+            <img class="w-20" src="/src/assets/close.png" alt="icon-close" />
           </div>
+          <div class="mx-auto container pb-[100px]">
+            <img />
+            <h1 class="text-center text-xl font-bold">
+              K.H Syarifullah S.pd M.A
+            </h1>
+            <h1 class="text-center text-2xl font-bold">
+              Ketua Yayasan As-Salam
+            </h1>
+          </div>
+          <div class="mx-auto container w-[1000px]">
+            <div class="flex mx auto w-[1180px]">
+              <img class="w-15 p-2" src="/jsit.png" alt="" />
+              <img class="w-15 p-2" src="sditlatahzan.png" alt="" />
+            </div>
+            <div
+              class="flex justify-between items-center container mx-auto w-[1000px]"
+            >
+              <h1>SIT LaTahzan</h1>
+              <h2>Navigasi</h2>
+              <h2>kontak</h2>
+            </div>
+          </div>
+          <footer class="mx-auto container flex justify-between w-[1180px]">
+            <div class="mx-auto container">
+              <h1>
+                Tempat terbaik untuk membentuk generasi unggul yang cerdas,
+                berakhlak mulia, dan berlandaskan nilai-nilai Islam.<h1></h1>
+                <div>
+                  <a href="#">Home</a>
+                  <a href="#">Tentang</a>
+                  <a href="#">Prestasi</a>
+                  <a href="#">Unit Pendidikan</a>
+                  <a href="#">PPDB</a>
+                </div>
+                <div>
+                  <h1>Alamat</h1>
+                  <h1>No.Telepon</h1>
+                  <h1>Email</h1>
+                </div>
+              </h1>
+            </div>
+          </footer>
+        </div>
       </div>
-      <footer class="mx-auto container flex justify-between w-[1180px]">
-        <div class="mx-auto container">
-          <h1 >Tempat terbaik untuk membentuk generasi unggul yang cerdas, berakhlak mulia, dan berlandaskan nilai-nilai Islam.<h1>
-        </div>
-        <div>
-          <a href="#">Home</a>
-          <a href="#">Tentang</a>
-          <a href="#">Prestasi</a>
-          <a href="#">Unit Pendidikan</a>
-          <a href="#">PPDB</a>
-        </div>
-        <div>
-          <h1>Alamat</h1>
-          <h1>No.Telepon</h1>
-          <h1>Email</h1>
-        </div>
-      </footer>
     </section>
-  </section>
-</Layout>
+  </section></Layout
+>
