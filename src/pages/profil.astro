@@ -1,188 +1,265 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import { profileMetaData } from "@/data/meta-data";
+import MissionCard from "@/components/mission-card.astro";
 ---
 
 <Layout description={profileMetaData.description} title={profileMetaData.title}>
-  <section class="bg-white mx-auto">
-    <div class="flex justify-between items-center container mx-auto p-7">
-      <img class="w-24" src="/jsit.png" alt="" />
-      <h1 class="text-center font-bold text-4xl">Sejarah LaTahzan</h1>
-      <img class="w-24" src="sditlatahzan.png" alt="" />
+  <section class="pt-44 mb-16 relative">
+    <svg
+      width="486"
+      height="814"
+      viewBox="0 0 486 814"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="absolute -z-10"
+    >
+      <g filter="url(#filter0_f_74_205)">
+        <circle cx="79" cy="407" r="307" fill="url(#paint0_radial_74_205)"
+        ></circle>
+      </g>
+      <defs>
+        <filter
+          id="filter0_f_74_205"
+          x="-328"
+          y="0"
+          width="814"
+          height="814"
+          filterUnits="userSpaceOnUse"
+          color-interpolation-filters="sRGB"
+        >
+          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"></feBlend>
+          <feGaussianBlur
+            stdDeviation="50"
+            result="effect1_foregroundBlur_74_205"></feGaussianBlur>
+        </filter>
+        <radialGradient
+          id="paint0_radial_74_205"
+          cx="0"
+          cy="0"
+          r="1"
+          gradientUnits="userSpaceOnUse"
+          gradientTransform="translate(79 407) rotate(90) scale(307)"
+        >
+          <stop stop-color="#A9C46C"></stop>
+          <stop offset="1" stop-color="white"></stop>
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-8">
+        <img class="w-24" src="/jsit.png" alt="JSIT" />
+        <h1 class="font-plus-jakarta-sans text-5xl tracking-[1px]">
+          Sejarah LaTahzan
+        </h1>
+        <img class="w-24" src="sditlatahzan.png" alt="SIT LaTahzan" />
+      </div>
+      <div class="w-full max-w-3xl mx-auto">
+        <p class="text-[#999999] text-center tracking-[1px] mb-5">
+          Sejak berdirinya Yayasan Assalam unit pertama yang bergerak adalah
+          Pesantren Yatim Assalam dengan tujuan non provit Alhamdulillah
+          banyaknya Alumni Santri Pesantren Assalam sejak berdirinya pada tahun
+          1990 yang sudah mendapatkan manfaatnya sejak saat itu berdirilah
+          lembaga pendidikan RA Assalam pada tahun 2002 kemudian unit baru SDIT
+          Latahzan pada tahun 2011 dengan jumlah 10 Siswa dan Alhamdulillah
+          sejak saat ini mendirikan Rumah Quran Latahzan ditahun 2024 dan
+          menyusul pada tahun ini 2025 berdiri SMPIT Latahzan.
+        </p>
+        <p class="text-[#999999] text-center tracking-[1px] mb-5">
+          SDIT Latahzan berdiri sejak 2011. Dengan niat dakwah dan semangat
+          untuk mendirikan Lembaga Pendidikan Islam Terpadu yang memplopori
+          diwilayah khususnya Kecamatan Mauk dengan jumlah peserta didik 10
+          Siswa, beriringnya waktu Alhamdulillah sejak saat berdiri sudah banyak
+          prestasi diberbagai bidang, Para Alumni tersebar dipesantren Favorit
+          dan juga Sekolah Negeri Favorit sekitar Tangerang.
+        </p>
+        <p class="text-[#999999] text-center tracking-[1px]">
+          Berkat tekad yang kuat kami demi meningkatkan mutu dan kualitas
+          pendidikan, SDIT Latahzan membuka kelas Excellent berbasis bilingual
+          dengan sistem fullday school, Alhamdulillah Antusiasme dan kepercayaan
+          masyarakat makin meningkat untuk mengamanahkan putra putrinya belajar
+          di SDIT Latahzan. Semoga lahir lah generasi robbani yang paham agama
+          dan memadukan keilmuannya untuk kepentingan umat.
+        </p>
+      </div>
     </div>
-    <div class="mx-auto w-[1100px] container p-10 pb-[100px]">
-      <p class="text-justify text-xl tracking-wide pb-7 indent-10 mb-[12px]">
-        Sejak berdirinya Yayasan Assalam unit pertama yang bergerak adalah
-        Pesantren Yatim Assalam dengan tujuan non provit Alhamdulillah banyaknya
-        Alumni Santri Pesantren Assalam sejak berdirinya pada tahun 1990 yang
-        sudah mendapatkan manfaatnya sejak saat itu berdirilah lembaga
-        pendidikan RA Assalam pada tahun 2002 kemudian unit baru SDIT Latahzan
-        pada tahun 2011 dengan jumlah 10 Siswa dan Alhamdulillah sejak saat ini
-        mendirikan Rumah Quran Latahzan ditahun 2024 dan menyusul pada tahun ini
-        2025 berdiri SMPIT Latahzan.
-      </p>
-      <p class="text-justify text-xl tracking-wide pb-7 indent-10 mb-[12px]">
-        SDIT Latahzan berdiri sejak 2011. Dengan niat dakwah dan semangat untuk
-        mendirikan Lembaga Pendidikan Islam Terpadu yang memplopori diwilayah
-        khususnya Kecamatan Mauk dengan jumlah peserta didik 10 Siswa,
-        beriringnya waktu Alhamdulillah sejak saat berdiri sudah banyak prestasi
-        diberbagai bidang, Para Alumni tersebar dipesantren Favorit dan juga
-        Sekolah Negeri Favorit sekitar Tangerang.
-      </p>
-      <p class="text-justify text-xl tracking-wide pb-7 indent-10 mb-[12px]">
-        Berkat tekad yang kuat kami demi meningkatkan mutu dan kualitas
-        pendidikan, SDIT Latahzan membuka kelas Excellent berbasis bilingual
-        dengan sistem fullday school, Alhamdulillah Antusiasme dan kepercayaan
-        masyarakat makin meningkat untuk mengamanahkan putra putrinya belajar di
-        SDIT Latahzan. Semoga lahir lah generasi robbani yang paham agama dan
-        memadukan keilmuannya untuk kepentingan umat.
+  </section>
+  <section class="mb-16">
+    <div class="w-full max-w-3xl mx-auto px-4 text-center">
+      <h2 class="font-plus-jakarta-sans text-5xl tracking-[1px] mb-8">Visi</h2>
+      <p class="text-[#999999] text-center tracking-[1px]">
+        Membentuk generasi Rabbani yang menguasai serta memanfaatkan ilmu
+        pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
       </p>
     </div>
   </section>
-  <section class="bg-white mx-auto container">
-    <section class="mx-auto container">
-      <div class="w-full rounded-e-xl border-solid mb-[120px]">
-        <h2 class="text-center font-bold mt-[100px] text-[48px]">VISI</h2>
-        <p class="text-center text-xl mt-[80px]">
-          Membentuk generasi Rabbani yang menguasai serta memanfaatkan ilmu
-          pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
-        </p>
-      </div>
-      <div class="w-full mt-[100px]">
-        <h2 class="text-center font-bold mt-[100px] pl-4 text-[48px]">MISI</h2>
-        <p class="text-center mt-10 p-4 pb-10 text-xl">
+  <section class="mb-20">
+    <div class="mx-auto container px-4">
+      <div class="max-w-3xl mx-auto text-center mb-8">
+        <h2 class="font-plus-jakarta-sans text-5xl tracking-[1px] mb-8">
+          Misi
+        </h2>
+        <p class="text-[#999999] tracking-[1px]">
           Sebagai wujud nyata dari visi sekolah, kami merumuskan tujuh misi
           utama yang menjadi dasar dalam setiap langkah pendidikan di SIT
           LaTahzan.
         </p>
-        <div class="grid grid-cols-12 gap-5 pt-[110px]">
-          <div class="col-span-4">
-            <div class="">
-              <p class="mt-3 text-center text-2sm pl-4">
+      </div>
+
+      <div class="relative">
+        <svg
+          width="1380"
+          height="1380"
+          viewBox="0 0 1380 1380"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <g filter="url(#filter0_f_77_247)">
+            <circle cx="690" cy="690" r="590" fill="url(#paint0_radial_77_247)"
+            ></circle>
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_77_247"
+              x="0"
+              y="0"
+              width="1380"
+              height="1380"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"></feBlend>
+              <feGaussianBlur
+                stdDeviation="50"
+                result="effect1_foregroundBlur_77_247"></feGaussianBlur>
+            </filter>
+            <radialGradient
+              id="paint0_radial_77_247"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(690 690) rotate(90) scale(590)"
+            >
+              <stop stop-color="#A9C46C"></stop>
+              <stop offset="1" stop-color="white"></stop>
+            </radialGradient>
+          </defs>
+        </svg>
+        <ul class="grid grid-cols-12 gap-5">
+          <li class="col-span-4">
+            <MissionCard>
+              <p class="text-center text-2xl">
                 Menyelanggarakan <strong>pendidikan</strong> berdasarkan <strong
                   >keislaman</strong
                 >.
               </p>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <div>
-              <p class="mt-3 text-center text-2sm pl-4">
+            </MissionCard>
+          </li>
+          <li class="col-span-4">
+            <MissionCard>
+              <p class="text-center text-2xl">
                 Menanamkan keislaman berdasarkan <strong>al-Quran</strong> dan <strong
                   >Sunnah</strong
                 >.
               </p>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <div>
-              <p class="mt-3 text-center text-2sm pl-4">
+            </MissionCard>
+          </li>
+          <li class="col-span-4">
+            <MissionCard>
+              <p class="text-center text-2xl">
+                Meningkatkan prestasi, <strong>keterampilan</strong> dan <strong
+                  >kemandirian</strong
+                > siswa.
+              </p>
+            </MissionCard>
+          </li>
+          <li class="col-span-4">
+            <MissionCard>
+              <p class="text-center text-2xl">
+                Mencintai dan menjadikan <strong>budaya Nasional</strong> sebagai
+                <strong>Identitas diri</strong>.
+              </p>
+            </MissionCard>
+          </li>
+          <li class="col-span-8">
+            <MissionCard>
+              <p class="text-center text-2xl">
+                Memfasilitasi siswa dalam mengembangkan <strong
+                  >kemampuan</strong
+                >
+                dan <strong>pengetahuan</strong>.
+              </p>
+            </MissionCard>
+          </li>
+          <li class="col-span-8">
+            <MissionCard>
+              <p class="text-center text-2xl">
                 Melaksanakan program pendidikan, yang mendorong pola pikir <strong
                   >maju</strong
                 > dan
                 <strong>kreatif</strong>.
               </p>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <div>
-              <p class="mt-3 text-center text-2sm pl-4">
-                Memfasilitasi siswa dalam mengembangkan <strong
-                  >kemampuan</strong
-                > dan <strong>pengetahuan</strong>.
+            </MissionCard>
+          </li>
+          <li class="col-span-4">
+            <MissionCard>
+              <p class="text-center text-2xl">
+                Mewujudkan <strong>lingkungan</strong> sekolah <strong
+                  >bersih</strong
+                >, <strong>sehat</strong> dan <strong>nyaman</strong>.
               </p>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <div>
-              <p class="mt-3 text-center text-2sm pl-4">
-                Meningkatkan prestasi, <strong>keterampilan</strong> dan <strong
-                  >kemandirian</strong
-                > siswa.
-              </p>
-            </div>
-          </div>
-          <div class="col-span-4">
-            <div>
-              <p class="mt-3 text-center text-2sm pl-4">
-                Mencintai dan menjadikan <strong>budaya Nasional</strong> sebagai
-                <strong>Identitas diri</strong>.
-              </p>
-            </div>
-          </div>
-          <div class="col-span-12 flex justify-center">
-            <div>
-              <p class="mt-3 text-2sm pl-4">
-                <p>
-                  Mewujudkan <strong>lingkungan</strong> sekolah <strong
-                    >bersih</strong
-                  >, <strong>sehat</strong> dan <strong>nyaman</strong>.
-                </p>
-              </p>
-            </div>
-          </div>
+            </MissionCard>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-          <div class="mx-auto pb-10">
-            <h1 class="text-center font-bold pl-4 text-[48px] mt-[120px]">
-              TUJUAN
-            </h1>
-            <p class="text-center mt-10 pl-4 text-xl">
-              Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
-              pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
-            </p>
-          </div>
-          <div class="flex justify-between items-center mx-auto p-[100px]">
-            <img class="w-20" src="/src/assets/open.png" alt="icon-open" />
-            <h1 class="text-center mt-10 pl-4 text-3xl font-bold p-7">
-              Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
-              pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
-            </h1>
-            <img class="w-20" src="/src/assets/close.png" alt="icon-close" />
-          </div>
-          <div class="mx-auto container pb-[100px]">
-            <img />
-            <h1 class="text-center text-xl font-bold">
+  <section class="mb-24">
+    <div class="container mx-auto px-4">
+      <div class="w-full max-w-3xl mx-auto px-4 text-center mb-24">
+        <h2 class="font-plus-jakarta-sans text-5xl tracking-[1px] mb-8">
+          Tujuan
+        </h2>
+        <p class="text-[#999999] text-center tracking-[1px]">
+          Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
+          pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
+        </p>
+      </div>
+      <div>
+        <div class="flex justify-between items-center gap-24 mb-8">
+          <img class="w-20" src="/src/assets/open.png" alt="icon-open" />
+          <p
+            class="font-plus-jakarta-sans font-semibold text-[32px] tracking-[1px] leading-[40px] text-center"
+          >
+            Membentuk generasi Rabbani serta menguasai & memanfaatkan ilmu
+            pengetahuan dan teknologi dengan pola pikir maju dan kreatif.
+          </p>
+          <img class="w-20" src="/src/assets/close.png" alt="icon-close" />
+        </div>
+        <div class="flex justify-center gap-4">
+          <div class="w-16 aspect-square rounded-full bg-gray-200"></div>
+          <div>
+            <p class="font-plus-jakarta-sans font-semibold text-xl mb-1">
               K.H Syarifullah S.pd M.A
-            </h1>
-            <h1 class="text-center text-2xl font-bold">
-              Ketua Yayasan As-Salam
-            </h1>
+            </p>
+            <p class="text-[#474747]">Ketua Yayasan As-Salam</p>
           </div>
-          <div class="mx-auto container w-[1000px]">
-            <div class="flex mx auto w-[1180px]">
-              <img class="w-15 p-2" src="/jsit.png" alt="" />
-              <img class="w-15 p-2" src="sditlatahzan.png" alt="" />
-            </div>
-            <div
-              class="flex justify-between items-center container mx-auto w-[1000px]"
-            >
-              <h1>SIT LaTahzan</h1>
-              <h2>Navigasi</h2>
-              <h2>kontak</h2>
-            </div>
-          </div>
-          <footer class="mx-auto container flex justify-between w-[1180px]">
-            <div class="mx-auto container">
-              <h1>
-                Tempat terbaik untuk membentuk generasi unggul yang cerdas,
-                berakhlak mulia, dan berlandaskan nilai-nilai Islam.<h1></h1>
-                <div>
-                  <a href="#">Home</a>
-                  <a href="#">Tentang</a>
-                  <a href="#">Prestasi</a>
-                  <a href="#">Unit Pendidikan</a>
-                  <a href="#">PPDB</a>
-                </div>
-                <div>
-                  <h1>Alamat</h1>
-                  <h1>No.Telepon</h1>
-                  <h1>Email</h1>
-                </div>
-              </h1>
-            </div>
-          </footer>
         </div>
       </div>
-    </section>
-  </section></Layout
->
+    </div>
+  </section>
+</Layout>
