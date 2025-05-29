@@ -1,10 +1,18 @@
 ---
+interface Props {
+  color: string;
+}
 
+const { color } = Astro.props;
 ---
 
 <div
   class="w-full h-full bg-white flex flex-col items-center justify-center gap-6 px-8 py-16 border border-[#DDDDDD] rounded-[20px]"
 >
-  <div class="w-16 aspect-square rounded-full bg-red-500"></div>
+  <div
+    class="w-16 aspect-square rounded-full"
+    style={{ backgroundColor: color }}
+  >
+  </div>
   <slot />
 </div>

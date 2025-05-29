@@ -12,6 +12,7 @@ type TLink = {
   label: string;
   href?: string;
   children?: TLink[];
+  currentPathname?: string;
 };
 
 const links: TLink[] = [
@@ -80,19 +81,24 @@ const NavItemDropdown = ({ label, children }: TLink) => {
   );
 };
 
-const NavItem = ({ href, label, children }: TLink) => {
+const NavItem = ({ href, label, children, currentPathname }: TLink) => {
   if (href === undefined) {
     return NavItemDropdown({ label, children });
   }
   return (
     <li key={label} className="group relative">
       <a href={href}>{label}</a>
-      <div className="absolute w-full h-[2px] rounded bg-black scale-x-0 transition-transform group-hover:scale-x-100 origin-left" />
+      <div
+        className={clsx(
+          "absolute w-full h-[2px] rounded bg-black transition-transform group-hover:scale-x-100 origin-left",
+          href == currentPathname ? "scale-x-100" : "scale-x-0",
+        )}
+      />
     </li>
   );
 };
 
-export const Header = () => {
+export const Header = ({ currentPathname }: { currentPathname?: string }) => {
   const ref = useRef<HTMLHeadElement>(null);
 
   return (
@@ -104,14 +110,31 @@ export const Header = () => {
       )}
     >
       <div className="container mx-auto flex items-center justify-between">
-        <div className="flex gap-1">
-          <h1>Logo</h1>
+        <div className="flex gap-2">
+          <a
+            href="/"
+            className="inline-flex w-[52px] aspect-square rounded-full"
+          >
+            <img src="/sditlatahzan.png" alt="Logo SDIT LaTahzan" />
+          </a>
+          <a
+            href="https://jsit.id/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-[52px] aspect-square rounded-full"
+          >
+            <img src="/jsit.png" alt="Logo SDIT LaTahzan" />
+          </a>
         </div>
 
         <nav>
           <ul className="flex items-center gap-6">
             {links.map((link, _) => (
-              <NavItem key={link.label} {...link} />
+              <NavItem
+                key={link.label}
+                {...link}
+                currentPathname={currentPathname}
+              />
             ))}
           </ul>
         </nav>
