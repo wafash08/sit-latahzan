@@ -27,7 +27,7 @@ export const schoolUnits: SchoolUnit[] = [
   {
     id: "rq",
     title: "RQ",
-    src: "/public/rq-latahzan.jpeg",
+    src: "/public/images/rq-latahzan-qomar.jpeg",
     alt: "RQ",
   },
 ];
