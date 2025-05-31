@@ -9,25 +9,25 @@ export const schoolUnits: SchoolUnit[] = [
   {
     id: "tk",
     title: "TK",
-    src: "/src/assets/kegiatan-belajar-mengajar.png",
+    src: "/images/tk.jpeg",
     alt: "TK",
   },
   {
     id: "sd",
     title: "SD",
-    src: "/src/assets/kegiatan-belajar-mengajar.png",
+    src: "/public/sdit.jpeg",
     alt: "SD",
   },
   {
     id: "smp",
     title: "SMP",
-    src: "/src/assets/kegiatan-belajar-mengajar.png",
+    src: "/public/images/smp.jpg",
     alt: "SMP",
   },
   {
     id: "rq",
     title: "RQ",
-    src: "/src/assets/kegiatan-belajar-mengajar.png",
+    src: "/public/rq-latahzan.jpeg",
     alt: "RQ",
   },
 ];
