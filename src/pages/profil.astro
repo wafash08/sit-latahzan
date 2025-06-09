@@ -12,7 +12,7 @@ import MissionCard from "@/components/mission-card.astro";
       viewBox="0 0 486 814"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      class="absolute -z-10"
+      class="absolute -z-10 hidden lg:block"
     >
       <g filter="url(#filter0_f_74_205)">
         <circle cx="79" cy="407" r="307" fill="url(#paint0_radial_74_205)"
@@ -117,7 +117,7 @@ import MissionCard from "@/components/mission-card.astro";
           viewBox="0 0 1380 1380"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden lg:block"
         >
           <g filter="url(#filter0_f_77_247)">
             <circle cx="690" cy="690" r="590" fill="url(#paint0_radial_77_247)"
@@ -156,8 +156,8 @@ import MissionCard from "@/components/mission-card.astro";
             </radialGradient>
           </defs>
         </svg>
-        <ul class="grid grid-cols-12 gap-5">
-          <li class="col-span-4">
+        <ul class="grid grid-cols-12 gap-4 lg:gap-5">
+          <li class="col-span-full lg:col-span-4">
             <MissionCard color="#0B7BFF">
               <p class="text-center text-2xl">
                 Menyelanggarakan <strong>pendidikan</strong> berdasarkan <strong
@@ -166,7 +166,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-4">
+          <li class="col-span-full lg:col-span-4">
             <MissionCard color="#1DC35F">
               <p class="text-center text-2xl">
                 Menanamkan keislaman berdasarkan <strong>al-Quran</strong> dan <strong
@@ -175,7 +175,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-4">
+          <li class="col-span-full lg:col-span-4">
             <MissionCard color="#C931FF">
               <p class="text-center text-2xl">
                 Meningkatkan prestasi, <strong>keterampilan</strong> dan <strong
@@ -184,7 +184,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-4">
+          <li class="col-span-full lg:col-span-4">
             <MissionCard color="#FFAB2E">
               <p class="text-center text-2xl">
                 Mencintai dan menjadikan <strong>budaya Nasional</strong> sebagai
@@ -192,7 +192,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-8">
+          <li class="col-span-full lg:col-span-8">
             <MissionCard color="#FF2E2E">
               <p class="text-center text-2xl">
                 Memfasilitasi siswa dalam mengembangkan <strong
@@ -202,7 +202,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-8">
+          <li class="col-span-full lg:col-span-8">
             <MissionCard color="#4CBFF8">
               <p class="text-center text-2xl">
                 Melaksanakan program pendidikan, yang mendorong pola pikir <strong
@@ -212,7 +212,7 @@ import MissionCard from "@/components/mission-card.astro";
               </p>
             </MissionCard>
           </li>
-          <li class="col-span-4">
+          <li class="col-span-full lg:col-span-4">
             <MissionCard color="#A76545">
               <p class="text-center text-2xl">
                 Mewujudkan <strong>lingkungan</strong> sekolah <strong
@@ -239,22 +239,26 @@ import MissionCard from "@/components/mission-card.astro";
       </div>
       <div>
         <div class="flex justify-between items-center gap-24 mb-8">
-          <p class="text-8xl text-gray-200">“</p>
           <p
-            class="font-plus-jakarta-sans font-semibold text-[32px] tracking-[1px] leading-[40px] text-center"
+            class="font-plus-jakarta-sans font-semibold text-2xl md:text-[32px] tracking-[1px] leading-[30px] md:leading-[40px] text-center"
           >
-            Sarana tempat belajar yang nyaman, Berprestasi dan Mengembangkan potensi anak dengan pendidikan yang berkualitas. 
+            <span class="text-gray-200 lg:text-8xl">“</span>
+            Sarana tempat belajar yang nyaman, Berprestasi dan Mengembangkan potensi
+            anak dengan pendidikan yang berkualitas.
+            <span class="text-gray-200">”</span>
           </p>
-          <p class="text-8xl text-gray-200">”</p>
         </div>
-        <div class="flex justify-center gap-4">
-          <img src="/src/assets/photo-abi.png" class="w-16 aspect-square rounded-full bg-gray-200"></img>
-          <div>
-            <p class="font-plus-jakarta-sans font-semibold text-xl mb-1">
-              K.H Syarifullah M.pd
-            </p>
-            <p class="text-[#474747]">Ketua Yayasan As-Salam</p>
-          </div>
+        <div class="flex justify-center gap-4 mb-2">
+          <img
+            src="/src/assets/photo-abi.png"
+            class="w-20 aspect-square object-contain rounded-full shadow"
+          />
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="font-plus-jakarta-sans font-semibold text-xl mb-1">
+            K.H Syarifullah M.pd
+          </p>
+          <p class="text-[#474747]">Ketua Yayasan As-Salam</p>
         </div>
       </div>
     </div>

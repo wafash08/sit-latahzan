@@ -15,19 +15,19 @@ export const schoolUnits: SchoolUnit[] = [
   {
     id: "sd",
     title: "SD",
-    src: "/public/sdit.jpeg",
+    src: "/images/sdit.jpeg",
     alt: "SD",
   },
   {
     id: "smp",
     title: "SMP",
-    src: "/public/images/smp.jpg",
+    src: "/images/smp.jpg",
     alt: "SMP",
   },
   {
     id: "rq",
     title: "RQ",
-    src: "/public/images/rq-latahzan-qomar.jpeg",
+    src: "/images/rq-latahzan-qomar.jpeg",
     alt: "RQ",
   },
 ];

@@ -5,8 +5,13 @@ import {
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
 import clsx from "clsx";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Button } from "./ui/button";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@radix-ui/react-popover";
 
 type TLink = {
   label: string;
@@ -87,7 +92,9 @@ const NavItem = ({ href, label, children, currentPathname }: TLink) => {
   }
   return (
     <li key={label} className="group relative">
-      <a href={href}>{label}</a>
+      <a href={href} className="flex">
+        {label}
+      </a>
       <div
         className={clsx(
           "absolute w-full h-[2px] rounded bg-black transition-transform group-hover:scale-x-100 origin-left",
@@ -95,6 +102,56 @@ const NavItem = ({ href, label, children, currentPathname }: TLink) => {
         )}
       />
     </li>
+  );
+};
+
+const PopoverHamburger = ({
+  currentPathname,
+}: {
+  currentPathname?: string;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <Popover open={isOpen} onOpenChange={setIsOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="ghost"
+          className="flex-col items-start justify-center h-16 gap-1 cursor-pointer rounded-full"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span
+            className={clsx(
+              "w-8 h-1 bg-black transition-transform origin-center duration-300 rounded",
+              isOpen && "translate-y-2 rotate-45",
+            )}
+          />
+
+          <span
+            className={clsx(
+              "w-5 h-1 bg-black transition-all duration-300 rounded",
+              isOpen && "opacity-0 w-0",
+            )}
+          />
+
+          <span
+            className={clsx(
+              "w-8 h-1 bg-black transition-transform origin-center duration-300 rounded",
+              isOpen && "-translate-y-2 -rotate-45",
+            )}
+          />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="bg-white shadow rounded-xl p-4 mr-4">
+        <ul>
+          {links.map((link) => (
+            <li key={link.label} className="py-2">
+              <NavItem {...link} currentPathname={currentPathname} />
+            </li>
+          ))}
+        </ul>
+      </PopoverContent>
+    </Popover>
   );
 };
 
@@ -125,6 +182,10 @@ export const Header = ({ currentPathname }: { currentPathname?: string }) => {
           >
             <img src="/jsit.png" alt="Logo SDIT LaTahzan" />
           </a>
+        </div>
+
+        <div className="lg:hidden">
+          <PopoverHamburger currentPathname={currentPathname} />
         </div>
 
         <nav className="hidden lg:block">
