@@ -11,12 +11,12 @@ const { inHomePage } = Astro.props;
 <footer
   class:list={[
     "bg-[#F4FFC3]/50 w-full pb-16 relative",
-    inHomePage ? "pt-40" : "pt-16",
+    inHomePage ? "pt-24 md:pt-40" : "pt-16",
   ]}
 >
   {
     inHomePage && (
-      <div class="absolute -top-80 left-1/2 -translate-x-1/2 w-full max-w-5xl">
+      <div class="absolute -top-80 left-1/2 -translate-x-1/2 w-full max-w-5xl px-4">
         <CtaContent />
       </div>
     )
@@ -40,7 +40,7 @@ const { inHomePage } = Astro.props;
       </li>
     </ul>
 
-    <div class="grid grid-cols-3 gap-5 mb-20">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20">
       <div class="w-full max-w-xs">
         <h3 class="font-plus-jakarta-sans text-2xl tracking-[1px] mb-4">
           SIT LaTahzan

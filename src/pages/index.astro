@@ -15,28 +15,28 @@ import { homeMetaData } from "@/data/meta-data";
 >
   <section class="mb-32">
     <div
-      class="container px-4 pt-48 mx-auto flex flex-col justify-center items-center"
+      class="container px-4 pt-32 lg:pt-48 mx-auto flex flex-col justify-center items-center"
     >
       <h1
-        class="font-plus-jakarta-sans text-6xl font-bold w-full max-w-[890px] text-center leading-[74px] mb-6"
+        class="font-plus-jakarta-sans text-[40px] lg:text-6xl font-bold w-full max-w-[890px] text-center leading-[48px] lg:leading-[74px] mb-6"
       >
         Selamat datang di Sekolah Islam Terpadu (SIT) LaTahzan
       </h1>
       <p
-        class="text-xl text-[#474747] w-full max-w-[780px] text-center tracking-[0.5px] mb-8"
+        class="text-lg lg:text-xl text-[#474747] w-full max-w-[780px] text-center tracking-[0.5px] mb-8"
       >
         Tempat terbaik untuk membentuk generasi unggul yang cerdas, berakhlak
         mulia, dan berlandaskan nilai-nilai Islam.
       </p>
 
-      <div class="mb-20">
+      <div class="w-full max-w-sm mb-20">
         <CtaButtton href="/ppdb" />
       </div>
 
       <div class="relative w-full flex justify-center">
         <div
           class:list={[
-            "w-full aspect-video rounded-4xl overflow-hidden shadow",
+            "w-full aspect-video rounded-xl md:rounded-4xl overflow-hidden shadow",
             "scale-100 transition-transform",
           ]}
         >
@@ -61,16 +61,18 @@ import { homeMetaData } from "@/data/meta-data";
 
   <section class="mb-32">
     <div class="container px-4 mx-auto">
-      <p class="text-base tracking-[2px] text-center text-[#474747] mb-2">
+      <p
+        class="text-xs md:text-base tracking-[2px] text-center text-[#474747] mb-2"
+      >
         UNIT PENDIDIKAN
       </p>
       <h2
-        class="font-plus-jakarta-sans text-5xl text-center w-full max-w-[570px] mx-auto leading-[54px] mb-6"
+        class="font-plus-jakarta-sans text-4xl md:text-5xl text-center w-full max-w-[570px] mx-auto leading-[40px] md:leading-[54px] mb-6"
       >
         Pendidikan Islami dari Usia Dini hingga Remaja
       </h2>
       <p
-        class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
+        class="text-base md:text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
       >
         Dengan pendekatan holistik berbasis nilai-nilai Islam, setiap unit
         pendidikan di SIT LaTahzan dirancang untuk mendukung potensi anak sejak
@@ -78,7 +80,7 @@ import { homeMetaData } from "@/data/meta-data";
       </p>
 
       <div>
-        <ul class="grid grid-cols-2 gap-5">
+        <ul class="grid md:grid-cols-2 gap-4 md:gap-5">
           {
             schoolUnits.map((unit) => (
               <li>
@@ -98,16 +100,18 @@ import { homeMetaData } from "@/data/meta-data";
 
   <section class="mb-[458px]">
     <div class="container px-4 mx-auto">
-      <p class="text-base tracking-[2px] text-center text-[#474747] mb-2">
+      <p
+        class="text-xs md:text-base tracking-[2px] text-center text-[#474747] mb-2"
+      >
         INOVASI PEMBELAJARAN
       </p>
       <h2
-        class="font-plus-jakarta-sans text-5xl text-center w-full max-w-[570px] mx-auto leading-[54px] mb-6"
+        class="font-plus-jakarta-sans text-4xl md:text-5xl text-center w-full max-w-[570px] mx-auto leading-[40px] md:leading-[54px] mb-6"
       >
         Program Unggulan
       </h2>
       <p
-        class="text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
+        class="text-base md:text-lg text-[#999999] w-full max-w-[780px] text-center mx-auto mb-12"
       >
         Kami menghadirkan beragam program unggulan yang menjadi ciri khas SIT
         LaTahzan—mengintegrasikan nilai-nilai Islam dengan pembelajaran akademik
@@ -122,7 +126,7 @@ import { homeMetaData } from "@/data/meta-data";
           viewBox="0 0 1380 1380"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          class="hidden lg:block absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         >
           <g filter="url(#filter0_f_77_247)">
             <circle cx="690" cy="690" r="590" fill="url(#paint0_radial_77_247)"
@@ -161,12 +165,16 @@ import { homeMetaData } from "@/data/meta-data";
             </radialGradient>
           </defs>
         </svg>
-        <ul class="grid grid-cols-2 gap-5">
+        <ul class="grid md:grid-cols-2 gap-4 md:gap-5">
           {
             programs.map((program) => {
               return (
                 <li
-                  class:list={[program.featured ? "col-span-2" : "col-span-1"]}
+                  class:list={[
+                    program.featured
+                      ? "col-span-1 md:col-span-2"
+                      : "col-span-1",
+                  ]}
                 >
                   <ProgramCard
                     color={program.color}

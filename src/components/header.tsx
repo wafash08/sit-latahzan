@@ -109,7 +109,7 @@ export const Header = ({ currentPathname }: { currentPathname?: string }) => {
         "z-50 bg-white/50 backdrop-blur-sm",
       )}
     >
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex gap-2">
           <a
             href="/"
@@ -127,7 +127,7 @@ export const Header = ({ currentPathname }: { currentPathname?: string }) => {
           </a>
         </div>
 
-        <nav>
+        <nav className="hidden lg:block">
           <ul className="flex items-center gap-6">
             {links.map((link, _) => (
               <NavItem
