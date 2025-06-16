@@ -1,15 +1,11 @@
 ---
 interface Props {
   href: string;
-  text?: string;
   externalLink?: boolean;
+  // children: HTMLElement;
 }
 
-const {
-  href,
-  text = "Yuk, Daftar Sekarang",
-  externalLink = false,
-} = Astro.props;
+const { href, externalLink = false } = Astro.props;
 ---
 
 <a
@@ -20,5 +16,6 @@ const {
     "transition-all bg-[#5D8736] hover:bg-[#5d8736]/90",
   ]}
 >
-  {text}
+  <slot />
+  <!-- {children} -->
 </a>
