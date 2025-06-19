@@ -17,7 +17,7 @@ export const programs: Program[] = [
   },
   {
     id: "2",
-    name: "Kelas Excellent",
+    name: "Excellent Class",
     description:
       "Kelas khusus dengan pendekatan pembelajaran yang lebih mendalam untuk mengembangkan potensi akademik siswa secara optimal",
     color: "#1DC35F",
