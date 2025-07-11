@@ -9,7 +9,7 @@ type Program = {
 export const programs: Program[] = [
   {
     id: "1",
-    name: "Tahfiz 1-3 Juz",
+    name: "Tahfizh 1-3 Juz",
     description:
       "Program intensif untuk menghafal Al-Qur'an mulai dari 1 hingga 3 juz, dibimbing oleh guru yang berkompeten dan berpengalaman",
     featured: true,
